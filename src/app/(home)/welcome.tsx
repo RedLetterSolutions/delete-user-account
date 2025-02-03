@@ -29,7 +29,7 @@ export function Welcome({ portalUrl }: { portalUrl?: string }) {
           <Heading variant="3xl">Welcome to the custom app base</Heading>
         </div>
         <Body variant="lg" tag="p">
-          This is a demo of a custom app that integrates with Copilot. Our goal
+          This Hi! is a demo of a custom app that integrates with Copilot. Our goal
           is to enable developers to easily make apps that look and feel like a
           part of our software, creating a seamless experience for your clients.
         </Body>

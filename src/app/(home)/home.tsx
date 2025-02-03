@@ -3,6 +3,7 @@ import { copilotApi } from 'copilot-node-sdk';
 import { Welcome } from '@/app/(home)/welcome';
 import { TokenGate } from '@/components/TokenGate';
 import { Container } from '@/components/Container';
+import DeleteUserButton from '@/components/DeleteUserButton';
 
 /**
  * The revalidate property determine's the cache TTL for this page and
@@ -21,8 +22,10 @@ async function Content({ searchParams }: { searchParams: SearchParams }) {
   console.log({ workspace, session });
   return (
     <Container>
-      <Welcome portalUrl={workspace.portalUrl} />
-    </Container>
+    <h1 className="text-2xl font-bold mb-4">Delete Your Account</h1>
+    <p className="mb-4">Are you sure you want to delete your account? This action cannot be undone.</p>
+    <DeleteUserButton apiKey={process.env.COPILOT_API_KEY ?? ''} clientId={session?.clientId ?? ''} />
+  </Container>
   );
 }
 
